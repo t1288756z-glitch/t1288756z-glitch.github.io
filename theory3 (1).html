@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Теория по заданию 3. Анализ логических высказываний</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="main">
+    <section class="wrapper">
+        <header class="header">
+        <nav class="menu">
+            <a class="menu__item" href="mainpage.html">Главная</a>
+            <a class="menu__item" href="theorymain.html">Теория</a>
+            <a class="menu__item" href="practicemain.html">Практика</a>
+        </nav>
+        </header>
+        <section class="about">
+                <h2>Тип 3. Анализ логических высказываний. Теория</h2>
+                <div style="height: 20px;"></div>
+                <p><b>1. Основные логические операции</b></p>
+                    <div style="height: 10px;"></div>
+                    <table class="th3">
+                    <thead>
+                        <tr>
+                            <th>Логическая связка</th>
+                            <th>Логическая операция</th>
+                            <th>Другое название</th>
+                            <th>Истинно, если...</th>
+                            <th>Обозначение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>НЕ</td><td>Отрицание</td><td>Инверсия</td><td>Исходное высказывание ложно</td><td>¬</td></tr>
+                        <tr><td>И</td><td>Умножение</td><td>Конъюнкция</td><td>Оба условия выполняются одновременно</td><td>∧</td></tr>
+                        <tr><td>ИЛИ</td><td>Сложение</td><td>Дизъюнкция</td><td>Выполняется хотя бы одно из условий</td><td>∨</td></tr>
+                    </tbody>
+                    </table>
+                <div style="height: 10px;"></div>
+                <p><b>2. Алгоритм решения</b></p>
+                    <ol>
+                        <li><strong>Избавьтесь от «НЕ»:</strong> Раскройте скобки с отрицанием, перевернув знаки неравенств.</li>
+                        <li><strong>Определите границы:</strong> Если стоит «И», вам нужно найти пересечение условий (число должно подходить под оба сразу). Если условий несколько, запишите их в ряд (например, 7 &lt; X &lt;= 15).</li>
+                        <li><strong>Выберите число:</strong> Если нужно <u>наименьшее</u> — берите самое маленькое целое из подходящих. Если нужно <u>наибольшее</u> — берите самое большое.</li>
+                    </ol>
+                <div style="height: 10px;"></div>
+                <p><b>3. Пример</b></p>
+                    <p>Напишите наименьшее целое X, для которого истинно высказывание: НЕ(X &lt;= 7) И (X чётное)</p>
+                    <ol>
+                        <li>Раскрываем НЕ(X ≤ 7) и получаем X &gt; 7</li>
+                        <li>Условие теперь: (X &gt; 7) И (X чётное)</li>
+                        <li>Числа, которые больше 7: 8, 9, 10...</li>
+                        <li>Наименьшее <b>чётное</b> из них — <b>8</b></li>
+                    </ol>
+                <div style="height: 20px;"></div>
+                <p><b>4. На чём можно ошибиться:</b></p>
+                    <ul>
+                        <li><strong>Строгие и нестрогие знаки:</strong> Запомните: НЕ (&gt;) — это ≤, а НЕ (≥) — это &lt;. Это критично для выбора ответа.</li>
+                        <li><strong>Чётность:</strong> Ноль считается чётным числом.</li>
+                        <li><strong>Тип чисел:</strong> Внимательно читайте, нужно «целое число» или «натуральное» (натуральные начинаются с 1).</li>
+                    </ul>
+                <p><a href="practice5.html">Перейти к практике по заданию...</a></p>
+                <script>
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+        </section>
+    </section>
+</main>
+<div id="footer-placeholder"></div>
+</body>
+</html>
+

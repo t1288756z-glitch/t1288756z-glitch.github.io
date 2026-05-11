@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Теория по заданию 12. Поиск в файловой системе</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="main">
+    <section class="wrapper">
+        <header class="header">
+        <nav class="menu">
+            <a class="menu__item" href="mainpage.html">Главная</a>
+            <a class="menu__item" href="theorymain.html">Теория</a>
+            <a class="menu__item" href="practicemain.html">Практика</a>
+        </nav>
+        </header>
+        <section class="about">
+                <h2>Тип 12. Поиск в файловой системе. Теория</h2>
+                <div style="height: 20px;"></div>
+                <p><b>Маски файлов для задания:</b></p>
+                    <ul>
+                        <li><strong>Звёздочка *</strong> означает любое количество любых символов (в том числе ничего).</li>
+                        <li><strong>Вопросительный знак ?</strong> — это один обязательный любой символ.</li>
+                        <li><strong>Кавычки "..."</strong> задают строгую границу маски. Например, по маске *.doc у вас найдутся файлы с расширениями doc, docx, dock, а при строгом поиске "*.doc" файлы <u>обязательно будут оканчиваться на .doc</u>.</li>
+                    </ul>
+                <div style="height: 20px;"></div>
+                <p><a href="practice12.html">Перейти к практике по заданию...</a></p>
+                <script>
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+        </section>
+    </section>
+</main>
+<div id="footer-placeholder"></div>
+</body>
+</html>

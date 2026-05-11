@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Теория по заданию 5. Исполнители и алгоритмы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="main">
+    <section class="wrapper">
+        <header class="header">
+        <nav class="menu">
+            <a class="menu__item" href="mainpage.html">Главная</a>
+            <a class="menu__item" href="theorymain.html">Теория</a>
+            <a class="menu__item" href="practicemain.html">Практика</a>
+        </nav>
+        </header>
+        <section class="about">
+                <h2>Тип 5. Исполнители и алгоритмы. Теория</h2>
+                <div style="height: 20px;"></div>
+                <p><b>1. Алгоритм решения (метод «обратного хода»)</b></p>
+                    <ol>
+                        <li><strong>Запишите конечное число.</strong></li>
+                        <li><strong>Выбирайте действие, обратное команде 1 или 2.</strong></li>
+                        <li><strong>Контролируйте количество команд.</strong> В ОГЭ их обычно ровно 5. Если у вас получается 6 или более — вы где-то «проскочили» возможность деления.</li>
+                        <li><strong>Разверните результат.</strong> Полученную цепочку команд запишите в обратном порядке.</li>
+                        <li><strong>Проверьте себя.</strong> Обязательно пройдите путь от начального числа к конечному по своим командам.</li>
+                    </ol>
+                <div style="height: 10px;"></div>
+                <p><b>2. Пример</b></p>
+                <p>Условие: из 3 получить 30, команды: 1. возвести в квадрат, 2. вычесть 3.</p>
+                <p>Решение. Идём от 30 к 3, меняя команды на противоположные (извлечь корень/прибавить 3):</p>
+                    <ol>
+                        <li>30 — корень не извлекается. Прибавляем 3: 30 + 3 = 33 (команда 2).</li>
+                        <li>33 — корень не извлекается. Прибавляем 3: 33 + 3 = 36 (команда 2).</li>
+                        <li>36 — корень извлекается! √36 = 6 (команда 1).</li>
+                        <li>6 — корень не извлекается. Прибавляем 3: 6 + 3 = 9 (команда 2).</li>
+                        <li>9 — корень извлекается! √9 = 3 (команда 1).</li>
+                    </ol>
+                <p><b>Записываем алгоритм (в прямом порядке):</b> 12122</p>
+                <div style="height: 20px;"></div>
+                <p><a href="practice5.html">Перейти к практике по заданию...</a></p>
+                <script>
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+        </section>
+    </section>
+</main>
+<div id="footer-placeholder"></div>
+</body>
+</html>
+
+

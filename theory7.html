@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Теория по заданию 7. Адресация в Интернете</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="main">
+    <section class="wrapper">
+        <header class="header">
+        <nav class="menu">
+            <a class="menu__item" href="mainpage.html">Главная</a>
+            <a class="menu__item" href="theorymain.html">Теория</a>
+            <a class="menu__item" href="practicemain.html">Практика</a>
+        </nav>
+        </header>
+        <section class="about">
+                <h2>Тип 7. Адресация в Интернете. Теория</h2>
+                <div style="height: 20px;"></div>
+                <p><b>Примеры задач с решениями</b></p>
+                    <div class="image-container">
+                        <img src="https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2Notc4lQWKE-9Dt_dHADXolEn-3GwWbNRpb0t9_q9Xw_Uq4">
+                        <img src="https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotjmwJ6eHWyMchGSGZof0MXO3GwWbNRpb0t9_q9Xw_Uq4">
+                    </div>
+                <p>Источник:<a href="https://t.me/twocod"> Телеграм-канал «Артём Фролов | Информатика ОГЭ | Двоичный кот | Умскул»</a></p>
+                <div style="height: 20px;"></div>
+                <p><a href="practice7.html">Перейти к практике по заданию...</a></p>
+                <script>
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+        </section>
+    </section>
+</main>
+<div id="footer-placeholder"></div>
+</body>
+</html>
+
+

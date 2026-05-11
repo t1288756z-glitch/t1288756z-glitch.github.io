@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Теория по заданию 11. Поиск текстового редактора и операционной системы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="main">
+    <section class="wrapper">
+        <header class="header">
+        <nav class="menu">
+            <a class="menu__item" href="mainpage.html">Главная</a>
+            <a class="menu__item" href="theorymain.html">Теория</a>
+            <a class="menu__item" href="practicemain.html">Практика</a>
+        </nav>
+        </header>
+        <section class="about">
+                <h2>Тип 11. Поиск текстового редактора и операционной системы. Теория</h2>
+                <div style="height: 20px;"></div>
+                <p><b>1. Алгоритм решения</b></p>
+                    <ol>
+                        <li><strong>Поиск папки/файла:</strong> Откройте нужный каталог (например, «Проза» или «Поэзия») и в строке поиска (в окне проводника справа сверху) введите фамилию автора или название произведения из условия.</li>
+                        <li><strong>Поиск внутри текста:</strong> Нажмите комбинацию клавиш <b>Ctrl + F</b> (универсальный поиск по документу) и введите в появившееся поле ключевое слово из задания (например, «Воронеж» или «собака»).</li>
+                    </ol>
+                <div style="height: 10px;"></div>
+                <p><b>2. На что обратить внимание:</b></p>
+                    <ul>
+                        <li><strong>Регистр:</strong>  Поиск обычно не чувствителен к регистру, но если результатов слишком много, можно включить галочку «Учитывать регистр».</li>
+                        <li><strong>Только в этом произведении:</strong> Следите, чтобы поиск шел именно в той книге, которая указана в задании, а не по всей библиотеке.</li>
+                    </ul>
+                <div style="height: 20px;"></div>
+                <p><a href="practice11.html">Перейти к практике по заданию...</a></p>
+                <script>
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+        </section>
+    </section>
+</main>
+<div id="footer-placeholder"></div>
+</body>
+</html>
+
+

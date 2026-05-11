@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Практика по заданию 9. Поиск путей в графе </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <section class="wrapper">
+            <header class="header">
+                <nav class="menu">
+                    <a class="menu__item" href="mainpage.html">Главная</a>
+                    <a class="menu__item" href="theorymain.html">Теория</a>
+                    <a class="menu__item" href="practicemain.html">Практика</a>
+                </nav>
+            </header>
+            <section class="about">
+                <h2>Тип 10. Поиск путей в графе. Практика</h2>
+                <div style="height: 20px;"></div>
+                <!-- Задание 1 -->
+                <div class="quiz-item">   
+                    <p>1. На рисунке – схема дорог, связывающих города А, Б, В, Г, Д, Е, К. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей <b>из города А в город К</b>?</p>
+                    <p><img src="https://oge.fipi.ru/docs/74676951F093A0754D74F2D6E7955F06/questions/DFB875491268A4774D5D7AB736DF915E/xs3qstsrcDFB875491268A4774D5D7AB736DF915E_6_1640594408.png"></p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['8'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Чтобы найти количество путей в графе, нужно складывать значения всех вершин, из которых ведут стрелки в текущую. Начинаем с единицы в пункте А и двигаемся по направлению стрелок. К = В + Д + Е = 2 + 3 + 3 = 8<br>
+                            Ответ: <b>8</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 2 -->
+                <div class="quiz-item">   
+                    <p>2. На рисунке – схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж и К. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей <b>из города А в город К</b>?</p>
+                    <p><img src="https://oge.fipi.ru/docs/74676951F093A0754D74F2D6E7955F06/questions/20644F0FA34DB0B044BA261A25FCB98B/xs3qstsrc20644F0FA34DB0B044BA261A25FCB98B_6_1640595928.png"></p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['12'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Чтобы найти количество путей в графе, нужно складывать значения всех вершин, из которых ведут стрелки в текущую. Начинаем с единицы в пункте А и двигаемся по направлению стрелок. К = Г + Ж + Е = 4 + 5 + 3 = 12<br>
+                            Ответ: <b>12</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 3 -->
+                <div class="quiz-item">      
+                    <p>3. На рисунке – схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж, З, И, К и Л. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей <b>из города А в город Л</b>?</p>
+                    <p><img src="https://oge.fipi.ru/docs/74676951F093A0754D74F2D6E7955F06/questions/3065b16a4c6de3118b70001fc68344c9/xs3qstsrc3065b16a4c6de3118b70001fc68344c9_6_1640596536.png"></p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['15'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Чтобы найти количество путей в графе, нужно складывать значения всех вершин, из которых ведут стрелки в текущую. Начинаем с единицы в пункте А и двигаемся по направлению стрелок. Л = И + З + Ж + К = 3 + 10 + 1 + 1 = 15<br>
+                            Ответ: <b>15</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 4 -->
+                <div class="quiz-item">   
+                    <p>4. На рисунке – схема дорог, связывающих города A, B, C, D, E, F, G. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей <b>из города А в город G</b>?</p>
+                    <p><img src="https://oge.fipi.ru/docs/74676951F093A0754D74F2D6E7955F06/questions/704413c68561e311b9b6001fc68344c9/xs3qstsrc704413c68561e311b9b6001fc68344c9_5_1640602595.png"></p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['6'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Чтобы найти количество путей в графе, нужно складывать значения всех вершин, из которых ведут стрелки в текущую. Начинаем с единицы в пункте А и двигаемся по направлению стрелок. G = E + C + F = 3 + 1 + 2 = 6<br>
+                            Ответ: <b>6</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 5 -->
+                <div class="quiz-item">
+                    <p>5. На рисунке – схема дорог, связывающих города А, Б, В, Г, Д, Е, К. По каждой дороге можно двигаться только в одном направлении, указанном стрелкой. Сколько существует различных путей <b>из города А в город К</b>?</p>
+                    <p><img src="https://oge.fipi.ru/docs/74676951F093A0754D74F2D6E7955F06/questions/EE76E26E5C09A6C5473C4529EE36BD64/xs3qstsrcEE76E26E5C09A6C5473C4529EE36BD64_6_1640594680.png"></p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['6'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Чтобы найти количество путей в графе, нужно складывать значения всех вершин, из которых ведут стрелки в текущую. Начинаем с единицы в пункте А и двигаемся по направлению стрелок. К = Д + Г + Е = 4 + 1 + 1 = 6<br>
+                            Ответ: <b>6</b>
+                        </div>
+                    </details>
+                </div>
+                <script>
+                    function check(button, correctAnswers) {
+                        // 
+                        const container = button.parentElement;
+                        // 
+                        const input = container.querySelector('.user-answer');
+                        const feedback = container.querySelector('.feedback');
+                        const userAnswer = input.value;
+                        if (correctAnswers.includes(userAnswer)) {
+                            feedback.innerText = " Верно!";
+                            feedback.style.color = "green";
+                        } else {
+                            feedback.innerText = " Ошибка";
+                            feedback.style.color = "red";
+                        }
+                    }
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+            </section>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+</body>
+</html>
+
+
+

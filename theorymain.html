@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Теория — главная</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="main">
+  <section class="wrapper">
+    <header class="header">
+      <nav class="menu">
+        <a class="menu__item" href="mainpage.html">Главная</a>
+        <a class="menu__item" href="theorymain.html">Теория</a>
+        <a class="menu__item" href="practicemain.html">Практика</a>
+      </nav>
+    </header>
+      <section class="about">
+      <h2>Теоретические материалы</h2>
+      <h3 style="text-align: center;">Для просмотра теории по определённому заданию кликните на соответствующую ему ссылку:</h3>
+      <div style="height: 10px;"></div>  
+        <section class="tasks"  style="padding-left: 100px;">
+          <p><a href="theory1.html"> Тип 1. Измерение информации</a></p>
+          <p><a href="theory2.html"> Тип 2. Декодирование информации</a></p>
+          <p><a href="theory3.html"> Тип 3. Анализ логических высказываний</a></p>
+          <p><a href="theory4.html"> Тип 4. Поиск кратчайшего пути</a></p>
+          <p><a href="theory5.html"> Тип 5. Исполнители и алгоритмы</a></p>
+          <p><a href="theory6.html"> Тип 6. Анализ программы с условным оператором</a></p>
+          <p><a href="theory7.html"> Тип 7. Адресация в Интернете</a></p>
+          <p><a href="theory8.html"> Тип 8. Множества поисковых запросов</a></p>
+          <p><a href="theory9.html"> Тип 9. Поиск путей в графе</a></p>
+          <p><a href="theory10.html"> Тип 10. Системы счисления</a></p>
+          <p><a href="theory11.html"> Тип 11. Поиск текстового редактора и операционной системы</a></p>
+          <p><a href="theory12.html"> Тип 12. Поиск в файловой системе</a></p>
+          <p><a href="theory13.html"> Тип 13. Создание презентации ИЛИ Создание текстового документа</a></p>
+          <p><a href="theory14.html"> Тип 14. Обработка больших данных в электорнных таблицах</a></p>
+          <p><a href="theory15.html"> Тип 15. Создание алгоритма для исполнителя Робот</a></p>
+          <p><a href="theory16.html"> Тип 16. Программа обработки последовательности чисел</a></p>
+        </section>
+      </section>
+  </section>
+</main>
+<div id="footer-placeholder"></div>
+<script>  
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+  });
+</script>
+</body>
+</html>

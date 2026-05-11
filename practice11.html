@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Практика по заданию 11. Поиск текстового редактора и операционной системы </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <section class="wrapper">
+            <header class="header">
+                <nav class="menu">
+                    <a class="menu__item" href="mainpage.html">Главная</a>
+                    <a class="menu__item" href="theorymain.html">Теория</a>
+                    <a class="menu__item" href="practicemain.html">Практика</a>
+                </nav>
+            </header>
+            <section class="about">
+                <h2>Тип 11. Поиск текстового редактора и операционной системы. Практика</h2>
+                <div style="height: 20px;"></div>
+                <!-- Задание 1 -->
+                <div class="quiz-item">   
+                    <p>1. В эпизоде одного из произведений И.А. Гончарова, содержащегося в подкаталоге каталога <b>Проза</b>, персонаж по фамилии <u>Волков</u> сообщает о некой семье, в которой говорят только <i>об искусстве</i>. С помощью поисковых средств операционной системы и текстового редактора определите <b>фамилию</b> главы этой семьи.</p>
+                    <p><a href="https://dropmefiles.com/8TgQd">Скачать файл</a></p>
+                    <input type="text" class="user-answer">
+                    <button onclick="check(this, ['мездров', 'Мездров', 'МЕЗДРОВ'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            1) Перейдите в папку Гончаров, находящуюся в каталоге Проза.<br>
+                            2) С помощью системного поиска найдите файлы, содержащие фамилию «Волков». Основной результат — роман «Обломов».<br>
+                            3) Откройте текстовый файл романа и используйте поиск по ключевому слову <b>«искусстве»</b> или <b>«Волков»</b>.<br>
+                            4) Вы найдёте фрагмент: «— Нет, я к <u>Мездровым</u>. ... Там только и разговору, что об искусствах...»<br>
+                            Ответ: <b>мездров</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 2 -->
+                <div class="quiz-item">   
+                    <p>2. В одном из произведений А.С. Пушкина, текст которого приведён в подкаталоге каталога <b>Проза</b>, есть персонаж по фамилии <u>Берестов</u>. С помощью поисковых средств операционной системы и текстового редактора или браузера выясните, <b>как называется имение</b>, в котором живёт этот человек.</p>
+                    <p><a href="https://dropmefiles.com/8TgQd">Скачать файл</a></p>
+                    <input type="text" class="user-answer">
+                    <button onclick="check(this, ['тугилово', 'Тугилово', 'ТУГИЛОВО'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            1) Перейдите в папку Пушкин, находящуюся в каталоге Проза.<br>
+                            2) С помощью системного поиска найдите файлы, содержащие фамилию «Берестов». Основной результат — «Барышня-крестьянка».<br>
+                            3) Откройте текстовый файл и используйте поиск по ключевому слову <b>«Берестов»</b>.<br>
+                            4) Вы найдёте фрагмент: «— В <u>Тугилово</u>, к Берестовым...»<br>
+                            Ответ: <b>тугилово</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 3 -->
+                <div class="quiz-item">   
+                    <p>3. В одном из произведений Н.В. Гоголя, текст которого приведён в подкаталоге каталога <b>Проза</b>, есть герой с фамилией <u>Ковалев</u>. С помощью поисковых средств операционной системы и текстового редактора или браузера выясните <b>чин государственной службы</b> этого героя.</p>
+                    <p><a href="https://dropmefiles.com/8TgQd">Скачать файл</a></p>
+                    <input type="text" class="user-answer">
+                    <button onclick="check(this, ['коллежский асессор', 'коллежскийасессор', 'Коллежскийасессор', 'КОЛЛЕЖСКИЙ АСЕССОР', 'КОЛЛЕЖСКИЙАСЕССОР', 'Коллежский асессор'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            1) Перейдите в папку Гоголь, находящуюся в каталоге Проза.<br>
+                            2) С помощью системного поиска найдите файлы, содержащие фамилию «Ковалев». Основной результат — «Нос».<br>
+                            3) Откройте текстовый файл и используйте поиск по ключевому слову <b>«Ковалев»</b>.<br>
+                            4) Вы найдёте фрагмент: «Иван Яковлевич был большой циник, и когда <u>коллежский асессор</u> Ковалев...»<br>
+                            Ответ: <b>коллежскийасессор</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 4 -->
+                <div class="quiz-item">   
+                    <p>4. В одном из произведений А.С. Пушкина, текст которого приведён в подкаталоге каталога <b>Проза</b>, есть персонаж <u>Екимовна</u>. С помощью поисковых средств операционной системы и текстового редактора или браузера выясните название этого произведения и напишите <b>первое слово из названия произведения.</b></p>
+                    <p><a href="https://dropmefiles.com/8TgQd">Скачать файл</a></p>
+                    <input type="text" class="user-answer">
+                    <button onclick="check(this, ['арап', 'Арап', 'АРАП'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            1) Перейдите в папку Пушкин, находящуюся в каталоге Проза.<br>
+                            2) С помощью системного поиска найдите файлы, содержащие «Екимовна». Основной результат — «Арап Петра Великого».<br>
+                            Ответ: <b>арап</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 5 -->
+                <div class="quiz-item">
+                    <p>5. В одном из произведений А.П. Чехова, текст которого приведён в подкаталоге каталога <b>Проза</b>, есть героиня по прозвищу <u>Печончиха</u>. С помощью поисковых средств операционной системы и текстового редактора или браузера выясните <b>имя этой женщины</b>.</p>
+                    <p><a href="https://dropmefiles.com/8TgQd">Скачать файл</a></p>
+                    <input type="text" class="user-answer">
+                    <button onclick="check(this, ['марфа', 'Марфа', 'МАРФА'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            1) Перейдите в папку Чехов, находящуюся в каталоге Проза.<br>
+                            2) С помощью системного поиска найдите файлы, содержащие «Печончиха». Основной результат — «Полное собрание рассказов».<br>
+                            3) Откройте текстовый файл и используйте поиск по ключевому слову <b>«Печончиха»</b>.<br>
+                            4) Вы найдёте фрагмент: «Генеральша <u>Марфа</u> Петровна Печонкина, или, как ее зовут мужики, Печончиха...»<br>
+                            Ответ: <b>марфа</b>
+                        </div>
+                    </details>
+                </div>
+                <script>
+                    function check(button, correctAnswers) {
+                        // 
+                        const container = button.parentElement;
+                        // 
+                        const input = container.querySelector('.user-answer');
+                        const feedback = container.querySelector('.feedback');
+                        const userAnswer = input.value;
+                        if (correctAnswers.includes(userAnswer)) {
+                            feedback.innerText = " Верно!";
+                            feedback.style.color = "green";
+                        } else {
+                            feedback.innerText = " Ошибка";
+                            feedback.style.color = "red";
+                        }
+                    }
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+            </section>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+</body>
+</html>
+
+
+

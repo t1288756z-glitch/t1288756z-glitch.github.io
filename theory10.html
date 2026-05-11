@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Теория по заданию 10. Системы счисления</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="main">
+    <section class="wrapper">
+        <header class="header">
+        <nav class="menu">
+            <a class="menu__item" href="mainpage.html">Главная</a>
+            <a class="menu__item" href="theorymain.html">Теория</a>
+            <a class="menu__item" href="practicemain.html">Практика</a>
+        </nav>
+        </header>
+        <section class="about">
+                <h2>Тип 10. Системы счисления. Теория</h2>
+                <div style="height: 20px;"></div>
+                <p><b>1. Алгоритм перевода числа из десятичной системы счисления:</b></p>
+                    <ol>
+                        <li>Число в десятичной системе счисления делят на основание системы счисления, в которую необходимо перевести.</li>
+                        <li>Записывать число начинают с последнего полученного остатка.</li>
+                    </ol>
+                <div style="height: 10px;"></div>
+                <p><b>2. Алгоритм перевода числа в десятичную систему счисления:</b></p>
+                    <ol>
+                        <li>Число в данной системе счисления разбивают на разряды.</li>
+                        <li>Каждый разряд умножают на основание системе счисления в степени, равной <b>n - 1</b>, где n - разряд (порядковый номер цифры в числе).</li>
+                        <li>Полученные произведения складывают.</li>
+                    </ol>
+                <div style="height: 10px;"></div>
+                <p><b>3. Примеры заданий с решениями:</b></p>
+                    <div class="image-container1">
+                        <img src="https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotFOhf2D4GyCunxeBstuEE9u3GwWbNRpb0t9_q9Xw_Uq4" width="400">
+                        <img src="https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotskrxGH6QL0ESnH-Dh_PGou3GwWbNRpb0t9_q9Xw_Uq4" width="400">
+                    </div>
+                    <p>Источники:<a href="https://t.me/twocod"> Телеграм-канал «Артём Фролов | Информатика ОГЭ | Двоичный кот | Умскул»</a>, <a href="https://dzen.ru/a/YpZiCYYTejfuUXC_?ysclid=moynioxhiv961779319">«Любопытыный информатик | Дзен»</a></p>
+                <div style="height: 20px;"></div>
+                <p><b>4. На что обратить внимание:</b></p>
+                    <ul>
+                        <li><strong>Специфика шестнадцатеричной системы счисления.</strong> Главная ловушка — буквы. Обязательно помните их значения:<br>
+                            <b>A=10, B=11, C=12, D=13, E=14, F=15</b>.</li>
+                        <li><strong>Вопрос задачи.</strong> В конце решения еще раз перечитайте, что именно нужно записать в ответ: <u>число (наибольшее или наименьшее), количество значащих нулей/единиц или количество всех знаков в числе</u>.</li>
+                    </ul>
+                <p><a href="practice10.html">Перейти к практике по заданию...</a></p>
+                <script>
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+        </section>
+    </section>
+</main>
+<div id="footer-placeholder"></div>
+</body>
+</html>
+
+
+

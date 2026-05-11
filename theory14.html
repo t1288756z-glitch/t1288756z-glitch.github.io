@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Теория по заданию 14. Обработка больших данных в электорнных таблицах</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="main">
+    <section class="wrapper">
+        <header class="header">
+        <nav class="menu">
+            <a class="menu__item" href="mainpage.html">Главная</a>
+            <a class="menu__item" href="theorymain.html">Теория</a>
+            <a class="menu__item" href="practicemain.html">Практика</a>
+        </nav>
+        </header>
+        <section class="about">
+                <h2>Тип 14. Обработка больших данных в электорнных таблицах. Теория</h2>
+                <div style="height: 20px;"></div>
+                <p><b>1. Основные функции в LibreOffice Calc:</b></p>
+                    <div class="image-container">
+                        <img src="https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotcnSvkPVIlNbFu17uCgJHGe3GwWbNRpb0t9_q9Xw_Uq4">
+                        <img src="https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2Not7PCiqdtlX3SOaDtFdt1FRO3GwWbNRpb0t9_q9Xw_Uq4">
+                    </div>
+                <p>Источник:<a href="https://t.me/twocod"> Телеграм-канал «Артём Фролов | Информатика ОГЭ | Двоичный кот | Умскул»</a></p>
+                <div style="height: 10px;"></div>
+                <p><b>2. Алгоритм построения диаграммы:</b></p>
+                    <ol>
+                        <li><strong>Подготовка данных (самое важное):</strong> Диаграмма строится по итоговым значениям. Если вам нужно сравнить количество учеников из трех округов, сначала выпишите их названия и результаты формул в свободные ячейки (например, G1:H3):<br>
+                        G1: СВАО | H1: 154<br>
+                        G2: ВАО | H2: 130<br>
+                        G3: ЗАО | H3: 110</li>
+                        <li><strong>Выделение диапазона:</strong> Выделите мышкой эти ячейки (и названия, и числа).</li>
+                        <li><strong>Вставка диаграммы:</strong> Нажмите на иконку <i>«Вставить диаграмму»</i> на панели инструментов или выберите в меню: <i>Вставка → Диаграмма...</i></li>
+                        <li><strong>Настройка (Мастер диаграмм):</strong> Выберите <u>Круговая</u> (она чаще всего требуется в 14 задании). Нажмите «Далее». Обязательно впишите <u>Заголовок</u>, если он требуется в условии. Проверьте, чтобы стояла галочка «Показать легенду». Нажмите «Готово».</li>
+                        <li><strong>Добавление подписей данных:</strong> Нажмите <i>правой кнопкой мыши по любому сектору диаграммы</i>. Выберите <b>Вставить подписи данных</b>.</li>
+                        <li><strong>Расположение:</strong> По условию задания диаграмму нужно разместить так, чтобы её <u>левый верхний угол находился вблизи указанной ячейки</u> (например, ячейки G15). Просто перетащите её мышкой в нужное место.</li>
+                    </ol>
+                <div style="height: 20px;"></div>
+                <p><a href="practice14.html">Перейти к практике по заданию...</a></p>
+                <script>
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+        </section>
+    </section>
+</main>
+<div id="footer-placeholder"></div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Практика по заданию 3. Анализ логических высказываний </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <section class="wrapper">
+            <header class="header">
+                <nav class="menu">
+                    <a class="menu__item" href="mainpage.html">Главная</a>
+                    <a class="menu__item" href="theorymain.html">Теория</a>
+                    <a class="menu__item" href="practicemain.html">Практика</a>
+                </nav>
+            </header>
+            <section class="about">
+                <h2>Тип 3. Анализ логических высказываний. Практика</h2>
+                <div style="height: 20px;"></div>
+                <!-- Задание 1 -->
+                <div class="quiz-item">   
+                    <p>1. Определите <b>наименьшее трёхзначное число x</b>, для которого <i>истинно</i> логическое выражение:</p>
+                    <p>(x оканчивается на 3) <b>И НЕ</b> (x &lt; 230).</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['233'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                        </div>
+                            Чтобы выражение было истинным, должны выполняться два условия: «x оканчивается на 3» и «x ≥ 230»<br>
+                            Наименьшее число, которое больше или равно 230 и оканчивается на 3 — это 233.<br>
+                            Ответ: <b>233</b>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 2 -->
+                <div class="quiz-item">   
+                    <p>2. Определите <b> количество натуральных двузначных чисел x</b>, для которых <i>ложно</i> логическое выражение:</p>
+                    <p><b>НЕ</b> (x чётное) <b>И НЕ</b> (x &gt; 39).</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['75'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                        </div>
+                            Для того чтобы выражение было ложным, должно быть истинным его отрицание.<br>
+                            Убираем внешние «НЕ»: получаем выражение (x чётное) ИЛИ (x &gt; 39).<br>
+                            Нам нужно найти количество двузначных чисел (10 ≤ x ≤ 99), которые либо чётные, либо больше 39. Таких чисел 15 + 60 = 75.<br>
+                            Ответ: <b>75</b>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 3 -->
+                <div class="quiz-item">   
+                    <p>3. Определите <b>наибольшее натуральное число x</b>, для которого <i>ложно</i> высказывание:</p>
+                    <p><b>НЕ</b> (x &lt; 6) <b>ИЛИ</b> ((x &lt; 5) <b>И</b> (x ≥ 39)).</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['5'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                        </div>
+                            Нам нужны числа, которые одновременно меньше 6 и не равны 4. Подходящие натуральные числа: 1, 2, 3, 5. Наибольшее из них — 5.<br>
+                            Ответ: <b>5</b>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 4 -->
+                <div class="quiz-item">   
+                    <p>4. Напишите <b>количество натуральных двузначных чисел</b>, для которых <i>истинно</i> высказывание:</p>
+                    <p><b>НЕ</b> (Число &lt; 88) <b>И НЕ</b> (Число нечётное).</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['6'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                        </div>
+                            Нам нужны чётные двузначные числа, которые больше или равны 88. Подходящие натуральные числа: 88, 90, 92, 94, 96, 98. Всего таких чисел 6.<br>
+                            Ответ: <b>6</b>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 5 -->
+                <div class="quiz-item">
+                    <p>5. Дано четыре числа: 6843, 4562, 3561, 1234. Для какого из приведённых чисел <i>истинно</i> высказывание:</p>
+                    <p>(Первая цифра чётная) <b>И НЕ</b> (Последняя цифра нечётная)?</p>
+                    <p>В ответе запишите это число.</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['4562'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            4562 — единственное число, у которого первая и последняя цифры чётные.<br>
+                            Ответ: <b>4562</b>
+                        </div>
+                    </details>
+                </div>
+                <script>
+                    function check(button, correctAnswers) {
+                        // 
+                        const container = button.parentElement;
+                        // 
+                        const input = container.querySelector('.user-answer');
+                        const feedback = container.querySelector('.feedback');
+                        const userAnswer = input.value;
+                        if (correctAnswers.includes(userAnswer)) {
+                            feedback.innerText = " Верно!";
+                            feedback.style.color = "green";
+                        } else {
+                            feedback.innerText = " Ошибка";
+                            feedback.style.color = "red";
+                        }
+                    }
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+            </section>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+</body>
+</html>
+
+

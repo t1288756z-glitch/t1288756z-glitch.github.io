@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Теория по заданию 1. Измерение информации</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="main">
+    <section class="wrapper">
+        <header class="header">
+        <nav class="menu">
+            <a class="menu__item" href="mainpage.html">Главная</a>
+            <a class="menu__item" href="theorymain.html">Теория</a>
+            <a class="menu__item" href="practicemain.html">Практика</a>
+        </nav>
+        </header>
+        <section class="about">
+                <h2>Тип 1. Измерение информации. Теория</h2>
+                <div style="height: 20px;"></div>
+                <p><b>1. Главная формула</b></p>
+                    <div class="formula" style="font-size: 20px;">I = K &times; i</div>
+                    <ul>
+                        <li><strong>I</strong> — информационный объем текста (размер файла).</li>
+                        <li><strong>K</strong> — количество символов в тексте (включая пробелы и знаки препинания).</li>
+                        <li><strong>i</strong> — информационный вес одного символа (зависит от кодировки, всегда указан в условии).</li>
+                    </ul>
+                <div style="height: 10px;"></div>
+                <p><b>2. Единицы измерения</b></p>
+                    <div class="important">
+                    <img src="https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2Not_3VgYzF-oVS4wyjd9rVY7O3GwWbNRpb0t9_q9Xw_Uq4" width="300">
+                        <p>Источник:<a href="https://t.me/DimaCooperr"> Телеграм-канал «Дима Купер | Эксперт на связи | Информатика ОГЭ в Умскул»</a></p>
+                    </div>
+                <div style="height: 10px;"></div>
+                <p><b>3. Алгоритм решения</b></p>
+                    <ol>
+                        <li><strong>Перевод единиц:</strong> Убедитесь, что объем (I) и вес символа (i) указаны в одних единицах (лучше в байтах).</li>
+                        <li><strong>Находим количество удалённых (добавленных) знаков:</strong> <code>K<sub>общ</sub> = I / i</code>.</li>
+                        <li><strong>Убираем лишнее:</strong> Вычитаем из полученного числа количество удалённых (добавленных) знаков; как правило, это запятая и/или пробел.</li>
+                        <li><strong>Считаем буквы:</strong> Полученное число и есть длина нужного слова.</li>
+                    </ol>
+                <div style="height: 10px;"></div>
+                <p><b>4. На чём можно ошибиться:</b></p>
+                    <ul>
+                        <li><strong>Запятая и пробел:</strong> В 99% задач при удалении слова из списка удаляется также одна запятая и один пробел.</li>
+                        <li><strong>Невнимательное чтение:</strong> Проверьте, в чем просят дать ответ (в битах или байтах).</li>
+                    </ul>
+                <div style="height: 20px;"></div>
+                <p><a href="practice1.html">Перейти к практике по заданию...</a></p>
+                <script>
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+        </section>
+    </section>
+</main>
+<div id="footer-placeholder"></div>
+</body>
+</html>
+

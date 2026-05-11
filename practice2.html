@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Практика по заданию 2. Декодирование информации </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <section class="wrapper">
+            <header class="header">
+                <nav class="menu">
+                    <a class="menu__item" href="mainpage.html">Главная</a>
+                    <a class="menu__item" href="theorymain.html">Теория</a>
+                    <a class="menu__item" href="practicemain.html">Практика</a>
+                </nav>
+            </header>
+            <section class="about">
+                <h2>Тип 2. Декодирование информации. Практика</h2>
+                <div style="height: 20px;"></div>
+                <!-- Задание 1 -->
+                <div class="quiz-item">   
+                    <p>1. Сообщение было зашифровано кодом. Использовались только буквы, приведённые в таблице.</p>
+                    <table class="marks">
+                    <thead>
+                    <tr>
+                        <th>А</th>
+                        <th>Б</th>
+                        <th>В</th>
+                        <th>Г</th>
+                        <th>Д</th>
+                        <th>Е</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>..o..</td>
+                        <td>.o..o</td>
+                        <td>.oo.o</td>
+                        <td>.oooo</td>
+                        <td>...o.</td>
+                        <td>.o.oo</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <p>Определите, какие буквы в сообщении повторяются <b>более одного раза</b>, и запишите их в ответе.</p>
+                    <p>...o..o.oo...o..oooo.o.oo</p>
+                    <input type="text" class="user-answer">
+                    <button onclick="check(this, ['де', 'ед', 'Де', 'Ед', 'ДЕ', 'ЕД'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть разбор и ответ</summary>
+                        <div class="explanation-content">
+                            Буквы, которые встречаются в тексте более одного раза: «Е» и «Д».<br>
+                            Ответ: <b>де ИЛИ ед</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 2 -->
+                <div class="quiz-item">   
+                    <p>2. От разведчика была получена следующая шифрованная радиограмма, переданная с использованием азбуки Морзе.</p>
+                    <p>– • • • – – – • – – • – – •</p>
+                    <p>При передаче радиограммы было потеряно разбиение на буквы, но известно, что использовались только следующие буквы.</p>
+                    <table class="marks">
+                    <thead>
+                    <tr>
+                        <th>Е</th>
+                        <th>Н</th>
+                        <th>О</th>
+                        <th>З</th>
+                        <th>Щ</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>•</td>
+                        <td>– •</td>
+                        <td>– – –</td>
+                        <td>– – • •</td>
+                        <td>– – • –</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <p>Определите текст радиограммы. В ответе укажите буквы, которые встречаются в тексте радиограммы <b>более одного раза</b>.</p>
+                    <input type="text" class="user-answer">
+                    <button onclick="check(this, ['не', 'ен', 'Не', 'Ен', 'НЕ', 'ЕН'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Буквы, которые встречаются в тексте более одного раза: «Е» и «Н». <br>
+                            Ответ: <b>ен ИЛИ не</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 3 -->
+                <div class="quiz-item">   
+                    <p>3. Вася и Петя играли в шпионов и кодировали сообщение собственным шифром. Фрагмент кодовой таблицы приведён ниже.</p>
+                    <table class="marks">
+                    <thead>
+                    <tr>
+                        <th>Н</th>
+                        <th>М</th>
+                        <th>Л</th>
+                        <th>И</th>
+                        <th>Т</th>
+                        <th>О</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>~</td>
+                        <td>*</td>
+                        <td>*@</td>
+                        <td>@~*</td>
+                        <td>@*</td>
+                        <td>~*</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <p>Расшифруйте сообщение, учитывая, что ни одна буква в нём <b>не повторяется</b>. Получившееся слово (набор букв) запишите в качестве ответа.</p>
+                    <p>*@@~**~*~</p>
+                    <input type="text" class="user-answer">
+                    <button onclick="check(this, ['лимон', 'Лимон', 'ЛИМОН'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Ход расшифровки: *@ — Л, @~* — И, * — М, ~* — О, ~ — Н.<br>
+                            Ответ: <b>лимон</b>
+                        </div>
+                    </details>   
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 4 -->
+                <div class="quiz-item">   
+                    <p>4. Валя шифрует русские слова, записывая вместо каждой буквы её код. Коды букв даны в таблице.</p>
+                    <table class="marks">
+                    <thead>
+                    <tr>
+                        <th>А</th>
+                        <th>В</th>
+                        <th>Д</th>
+                        <th>О</th>
+                        <th>Р</th>
+                        <th>У</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>011</td>
+                        <td>100</td>
+                        <td>111</td>
+                        <td>010</td>
+                        <td>001</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <p>Некоторые кодовые цепочки можно расшифровать несколькими способами. Например, 00101001 может означать не только УРА, но и УАУ.</p>
+                    <p>Даны три кодовые цепочки:</p>
+                    <p>01001001<br>
+                    0100100101<br>
+                    111011111100</p>
+                    <p>Найдите среди них ту, которая имеет <b>только одну расшифровку</b>, и запишите в ответе расшифрованное слово.</p>
+                    <input type="text" class="user-answer">
+                    <button onclick="check(this, ['овод', 'Овод', 'ОВОД'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Только третья цепочка имеет одну расшифровку. Единственный путь: 111 (О), 011 (В), 111 (О), 100 (Д).<br>
+                            Ответ: <b>овод</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 5 -->
+                <div class="quiz-item">
+                    <p>5. Ваня шифрует русские слова, записывая вместо каждой буквы её номер в алфавите (без пробелов). Номера букв даны в таблице.</p>
+                    <p>А  1 Й 11  У  21  Э  31<br>
+                    Б  2  К  12  Ф  22  Ю  32<br> 
+                    В  3  Л  13  Х  23  Я  33<br>
+                    Г  4  М  14  Ц  24<br>
+                    Д  5  Н  15  Ч  25<br>
+                    Е  6  О  16  Ш  26<br>
+                    Ё  7  П  17  Щ  27<br>
+                    Ж  8  Р  18  Ъ  28<br>
+                    З  9  С  19  Ы  29<br>
+                    И  10  Т  20  Ь  30</p>
+                    <p>Некоторые шифровки можно расшифровать несколькими способами. Например, 311333 может означать «ВАЛЯ», может – «ЭЛЯ», а может – «ВААВВВ».</p>
+                    <p>Даны четыре шифровки:</p>
+                    <p>92610<br>
+                    36910<br>
+                    13131<br>
+                    23456</p>
+                    <p>Только одна из них расшифровывается <b>единственным способом</b>. Найдите её и расшифруйте. Получившееся слово запишите в качестве ответа.</p>
+                    <input type="text" class="user-answer">
+                    <button onclick="check(this, ['вези', 'Вези', 'ВЕЗИ'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Из всех шифровок только 36910 расшифровывается единственным способом.<br>
+                            Ответ: <b>вези</b>
+                        </div>
+                    </details>
+                </div>
+                <script>
+                    function check(button, correctAnswers) {
+                        // 
+                        const container = button.parentElement;
+                        // 
+                        const input = container.querySelector('.user-answer');
+                        const feedback = container.querySelector('.feedback');
+                        const userAnswer = input.value;
+                        if (correctAnswers.includes(userAnswer)) {
+                            feedback.innerText = " Верно!";
+                            feedback.style.color = "green";
+                        } else {
+                            feedback.innerText = " Ошибка";
+                            feedback.style.color = "red";
+                        }
+                    }
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+            </section>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+</body>
+</html>
+

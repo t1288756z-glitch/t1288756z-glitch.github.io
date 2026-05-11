@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Практика по заданию 10. Системы счисления </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <section class="wrapper">
+            <header class="header">
+                <nav class="menu">
+                    <a class="menu__item" href="mainpage.html">Главная</a>
+                    <a class="menu__item" href="theorymain.html">Теория</a>
+                    <a class="menu__item" href="practicemain.html">Практика</a>
+                </nav>
+            </header>
+            <section class="about">
+                <h2>Тип 10. Системы счислеия. Практика</h2>
+                <div style="height: 20px;"></div>
+                <!-- Задание 1 -->
+                <div class="quiz-item">   
+                    <p>1. Переведите число <u>204</u> <b>из десятичной</b> системы счисления <b>в двоичную</b> систему счисления.</p>
+                    <p>В ответе укажите двоичное число. Основание системы счисления указывать не нужно.</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['11001100'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Чтобы перевести число 204 из десятичной системы в двоичную, нужно последовательно делить его на 2 и записывать остатки в обратном порядке: 11001100.<br>
+                            Ответ: <b>11001100</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 2 -->
+                <div class="quiz-item">   
+                    <p>2. Переведите число <u>110110</u> <b>из двоичной</b> системы счисления <b>в десятичную</b> систему счисления.</p>
+                    <p>В ответе напишите полученное число.</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['54'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Для перевода из двоичной системы в десятичную нужно расписать число как сумму степеней двойки (справа налево, начиная с нулевой степени):<br>
+                            1 * 2<sup>5</sup> + 1 * 2<sup>4</sup> + 0 * 2<sup>3</sup> + 1 * 2<sup>2</sup> + 1 * 2<sup>1</sup> + 0 * 2<sup>0</sup><br>
+                            32 + 16 + 0 + 4 + 2 + 0 = 54<br>
+                            Ответ: <b>54</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 3 -->
+                <div class="quiz-item">   
+                    <p>3. Переведите число <u>141</u> <b>из десятичной</b> системы счисления <b>в двоичную</b> систему счисления.</p>
+                    <p>Сколько единиц содержит полученное число? В ответе укажите одно число – <u>количество единиц</u>.</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['4'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            10001101 — это двоичная запись числа 141. Она содержит 4 единицы.<br>
+                            Ответ: <b>4</b>
+                        </div>
+                    </details> 
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 4 -->
+                <div class="quiz-item">   
+                    <p>4. Вычислите значение арифметического выражения:</p>
+                    <p>10111011<sub>2</sub> + 1011<sub>8</sub> – 101<sub>16</sub></p>
+                    <p>В ответе запишите <u>десятичное число</u>, основание системы счисления указывать не нужно.</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['451'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Для решения переведём все числа в десятичную систему:<br>
+                            10111011<sub>2</sub> = 1 * 2<sup>7</sup> + 0 * 2<sup>6</sup> + 1 * 2<sup>5</sup> + 1 * 2<sup>4</sup> + 1 * 2<sup>3</sup> + 0 * 2<sup>2</sup> + 1 * 2<sup>1</sup> + 1 * 2<sup>0</sup> = 128 + 0 + 32 + 16 + 8 + 0 + 2 + 1 = <b>187</b><br>
+                            1011<sub>8</sub> = 1 * 8<sup>3</sup> + 0 * 8<sup>2</sup> + 1 * 8<sup>1</sup> + 1 * 8<sup>0</sup> = 512 + 0 + 8 + 1 = <b>521</b><br>
+                            101<sub>16</sub> = 1 * 16<sup>2</sup> + 0 * 16<sup>1</sup> + 1 * 16<sup>0</sup> = 256 + 0 + 1 = <b>257</b><br>
+                            187 + 521 - 257 = 451<br>
+                            Ответ: <b>451</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 5 -->
+                <div class="quiz-item">
+                    <p>5. Переведите число <u>126</u> <b>из десятичной</b> системы счисления <b>в двоичную</b> систему счисления.</p>
+                    <p>Сколько значащих нулей содержит полученное число? В ответе укажите одно число – <u>количество нулей</u>.</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['1'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Число 126 в двоичной системе счисления выглядит так: 1111110. Оно содержит 1 значащий ноль.<br>
+                            Ответ: <b>1</b>
+                        </div>
+                    </details> 
+                </div>
+                <script>
+                    function check(button, correctAnswers) {
+                        // 
+                        const container = button.parentElement;
+                        // 
+                        const input = container.querySelector('.user-answer');
+                        const feedback = container.querySelector('.feedback');
+                        const userAnswer = input.value;
+                        if (correctAnswers.includes(userAnswer)) {
+                            feedback.innerText = " Верно!";
+                            feedback.style.color = "green";
+                        } else {
+                            feedback.innerText = " Ошибка";
+                            feedback.style.color = "red";
+                        }
+                    }
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+            </section>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+</body>
+</html>
+
+

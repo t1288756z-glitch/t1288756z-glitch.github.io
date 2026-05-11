@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Практика по заданию 12. Поиск в файловой системе </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <section class="wrapper">
+            <header class="header">
+                <nav class="menu">
+                    <a class="menu__item" href="mainpage.html">Главная</a>
+                    <a class="menu__item" href="theorymain.html">Теория</a>
+                    <a class="menu__item" href="practicemain.html">Практика</a>
+                </nav>
+            </header>
+            <section class="about">
+                <h2>Тип 12. Поиск в файловой системе. Практика</h2>
+                <div style="height: 20px;"></div>
+                <!-- Задание 1 -->
+                <div class="quiz-item">   
+                    <p>1. Сколько файлов c расширением <u>.txt</u> содержится в подкаталогах <b>Блок, Лермонтов и Пушкин</b> каталога <b>DEMO-12/Поэзия</b>? В ответе укажите только число.</p>
+                    <p><a href="https://dropmefiles.com/tLdSM">Скачать файл</a></p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['6'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            1) Зайдите в папку DEMO-12/Поэзия.<br>
+                            2) Выделите папки Блок, Лермонтов и Пушкин (или заходите в них по очереди).<br>
+                            3) В строке поиска (справа вверху окна) введите маску: "*.txt". Символ * означает любое имя, а .txt — конкретное расширение.<br>
+                            4) Проводник отобразит список всех текстовых файлов в этих папках и их подпапках. Количество найденных файлов обычно отображается в левом нижнем углу окна (строка состояния).<br>
+                            Ответ: <b>6</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 2 -->
+                <div class="quiz-item">   
+                    <p>2. Сколько файлов c расширением <u>.htm</u> содержится в подкаталогах каталога <b>DEMO-12</b>? В ответе укажите только число.</p>
+                    <p><a href="https://dropmefiles.com/tLdSM">Скачать файл</a></p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['26'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            1) Зайдите в папку DEMO-12.<br>
+                            2) В строке поиска (справа вверху окна) введите маску: "*.htm". Символ * означает любое имя, а .htm — конкретное расширение.<br>
+                            3) Проводник отобразит список всех файлов в этих папках и их подпапках. Количество найденных файлов обычно отображается в левом нижнем углу окна (строка состояния).<br>
+                            Ответ: <b>26</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 3 -->
+                <div class="quiz-item">   
+                    <p>3. Сколько файлов c расширением <u>.pdf</u> содержится в подкаталогах <b>Блок, Есенин и Пушкин</b> каталога <b>DEMO-12/Поэзия</b>? В ответе укажите только число.</p>
+                    <p><a href="https://dropmefiles.com/tLdSM">Скачать файл</a></p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['8'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            1) Зайдите в папку DEMO-12/Поэзия.<br>
+                            2) Выделите папки Блок, Есенин и Пушкин (или заходите в них по очереди).<br>
+                            3) В строке поиска (справа вверху окна) введите маску: "*.pdf". Символ * означает любое имя, а .pdf — конкретное расширение.<br>
+                            4) Проводник отобразит список всех текстовых файлов в этих папках и их подпапках. Количество найденных файлов обычно отображается в левом нижнем углу окна (строка состояния).<br>
+                            Ответ: <b>8</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 4 -->
+                <div class="quiz-item">   
+                    <p>4. Сколько всего файлов c расширениями <u>.jpeg и .txt</u> содержится в подкаталоге <b>Репин</b> каталога <b>DEMO-12/Живопись</b>, а также в подкаталогах <b>Блок и Леромонтов</b> каталога <b>DEMO-12/Поэзия</b>? В ответе укажите только число.</p>
+                    <p><a href="https://dropmefiles.com/tLdSM">Скачать файл</a></p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['12'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            В операционной системе Windows откройте по очереди каждую из папок. В поле поиска (справа вверху) введите запрос, который отфильтрует нужные расширения: сначала "*.txt", затем "*.jpeg". Просуммируйте количество найденных файлов во всех указанных локациях.<br>
+                            Ответ: <b>12</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 5 -->
+                <div class="quiz-item">
+                    <p>5. Сколько всего файлов c расширениями <u>.pdf и .jpeg</u> содержится в подкаталогах <b>Брюллов и Малевич</b> каталога <b>DEMO-12/Живопись</b>, а также в подкаталогах <b>Некрасов и Пушкин</b> каталога <b>DEMO-12/Поэзия</b>? В ответе укажите только число.</p>
+                    <p><a href="https://dropmefiles.com/tLdSM">Скачать RAR-архив</a></p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['17'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            В операционной системе Windows откройте по очереди каждую из папок. В поле поиска (справа вверху) введите запрос, который отфильтрует нужные расширения: сначала "*.pdf", затем "*.jpeg". Просуммируйте количество найденных файлов во всех указанных локациях.<br>
+                            Ответ: <b>17</b>
+                        </div>
+                    </details>
+                </div>
+                <script>
+                    function check(button, correctAnswers) {
+                        // 
+                        const container = button.parentElement;
+                        // 
+                        const input = container.querySelector('.user-answer');
+                        const feedback = container.querySelector('.feedback');
+                        const userAnswer = input.value;
+                        if (correctAnswers.includes(userAnswer)) {
+                            feedback.innerText = " Верно!";
+                            feedback.style.color = "green";
+                        } else {
+                            feedback.innerText = " Ошибка";
+                            feedback.style.color = "red";
+                        }
+                    }
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+            </section>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+</body>
+</html>
+
+
+
+

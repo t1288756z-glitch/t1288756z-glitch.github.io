@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Практика по заданию 5. Исполнители и алгоритмы </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <section class="wrapper">
+            <header class="header">
+                <nav class="menu">
+                    <a class="menu__item" href="mainpage.html">Главная</a>
+                    <a class="menu__item" href="theorymain.html">Теория</a>
+                    <a class="menu__item" href="practicemain.html">Практика</a>
+                </nav>
+            </header>
+            <section class="about">
+                <h2>Тип 5. Исполнители и алгоритмы. Практика</h2>
+                <div style="height: 20px;"></div>
+                <!-- Задание 1 -->
+                <div class="quiz-item">   
+                    <p>1. У исполнителя Квадратор две команды, которым присвоены номера:</p>
+                    <p><b>1. возведи в квадрат<br>2. зачеркни справа</b></p>
+                    <p>Первая из них возводит число на экране во вторую степень, вторая – удаляет крайнюю правую цифру числа.</p>
+                    <p>Составьте алгоритм получения <b>из числа 3 числа 6</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
+                    <p><i>(Например, 21211 – это алгоритм<br>
+                    зачеркни справа<br>
+                    возведи в квадрат<br>
+                    зачеркни справа<br>
+                    возведи в квадрат<br>
+                    возведи в квадрат,<br>
+                    который преобразует число 52 в 16.)</i></p>
+                    <p>Если таких алгоритмов более одного, то запишите любой из них.</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['11212'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Команда 1: 3<sup>2</sup> = 9.<br>
+                            Команда 1: 9<sup>2</sup> = 81.<br>
+                            Команда 2: 8.<br>
+                            Команда 1: 8<sup>2</sup> = 64.<br>
+                            Команда 2: 6.<br>
+                            Ответ: <b>11212</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 2 -->
+                <div class="quiz-item">   
+                    <p>2. У исполнителя Вычислитель две команды, которым присвоены номера:</p>
+                    <p><b>1. умножь на 3<br>2. прибавь 2</b></p>
+                    <p>Первая из них увеличивает число на экране в 3 раза, вторая увеличивает его на 2.</p>
+                    <p>Составьте алгоритм получения <b>из числа 3 числа 69</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
+                    <p><i>(Например, 11221 – это алгоритм<br>
+                    умножь на 3<br>
+                    умножь на 3<br>
+                    прибавь 2<br>
+                    прибавь 2<br>
+                    умножь на 3,<br>
+                    который преобразует число 1 в 39.)</i></p>
+                    <p>Если таких алгоритмов более одного, то запишите любой из них.</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['22121'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            Команда 2: 3 + 2 = 5.<br>
+                            Команда 2: 5 + 2 = 7.<br>
+                            Команда 1: 7 * 3 = 21.<br>
+                            Команда 2: 21 + 2 = 23.<br>
+                            Команда 1: 23 * 3 = 69.<br>
+                            Ответ: <b>22121</b>
+                        </div>
+                    </details>
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 3 -->
+                <div class="quiz-item">   
+                    <p>3. У исполнителя Вычислитель две команды, которым присвоены номера:</p>
+                    <p><b>1. вычесть 4<br>2. приписать 2</b></p>
+                    <p>Первая из них уменьшает число на 4, а вторая приписывает к нему справа 2.</p>
+                    <p>Составьте алгоритм получения <b> из числа 9 числа 4</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
+                    <p><i>(Например, 12111 – это алгоритм<br>
+                    вычесть 4<br>
+                    приписать 2<br>
+                    вычесть 4<br>
+                    вычесть 4<br>
+                    вычесть 4,<br>
+                    который преобразует число 6 в 10.)</i></p>
+                    <p>Если таких алгоритмов более одного, то запишите любой из них.</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['11211'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            9 → (команда 1) → 5 → (команда 1) → 1 → (команда 2) → 12 → (команда 1) → 8 → (команда 1) → 4.<br>
+                            Ответ: <b>11211</b>
+                        </div>
+                    </details> 
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 4 -->
+                <div class="quiz-item">   
+                    <p>4. У исполнителя Калькулятор две команды, которым присвоены номера:</p>
+                    <p><b>1. умножь на 3<br>2. вычти 5</b></p>
+                    <p>Первая из них утраивает число на экране, вторая уменьшает его на 5.</p>
+                    <p>Составьте алгоритм получения <b>из числа 1 числа 7</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
+                    <p><i>(Например, 21221 – это алгоритм<br>
+                    вычти 5<br>
+                    умножь на 3<br>
+                    вычти 5<br>
+                    вычти 5<br>
+                    умножь на 3,<br>
+                    который преобразует число 11 в 24.)</i></p>
+                    <p>Если таких алгоритмов более одного, то запишите любой из них.</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['11212'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            1 → (команда 1) → 3 → (команда 1) → 9 → (команда 2) → 4 → (команда 1) → 12 → (команда 2) → 7.<br>
+                            Ответ: <b>11212</b>
+                        </div>
+                    </details> 
+                </div>
+                <div style="height: 50px;"></div>
+                <!-- Задание 5 -->
+                <div class="quiz-item">
+                    <p>5. У исполнителя Квадратор две команды, которым присвоены номера:</p>
+                    <p><b>1. возведи в квадрат<br>2. вычти 3</b></p>
+                    <p>Первая из них возводит число на экране во вторую степень, вторая – вычитает из числа 3.</p>
+                    <p>Составьте алгоритм получения <b>из числа 1 числа 19</b>, содержащий не более 5 команд. В ответе запишите только номера команд.</p>
+                    <p><i>(Например, 12221 – это алгоритм<br>
+                    возведи в квадрат<br>
+                    вычти 3<br>
+                    вычти 3<br>
+                    вычти 3<br>
+                    возведи в квадрат,<br>
+                    который преобразует число 4 в 49.)</i></p>
+                    <p>Если таких алгоритмов более одного, то запишите любой из них.</p>
+                    <input type="number" class="user-answer">
+                    <button onclick="check(this, ['22122'])">Проверить</button>
+                    <span class="feedback"></span>
+                    <div style="height: 10px;"></div>
+                    <details>
+                    <summary>Посмотреть пояснение и ответ</summary>
+                        <div class="explanation-content">
+                            1 → (команда 2) → -2 → (команда 2) → -5 → (команда 1) → 25 → (команда 2) → 22 → (команда 2) → 19.<br>
+                            Ответ: <b>22122</b>
+                        </div>
+                    </details>
+                </div>
+                <script>
+                    function check(button, correctAnswers) {
+                        // 
+                        const container = button.parentElement;
+                        // 
+                        const input = container.querySelector('.user-answer');
+                        const feedback = container.querySelector('.feedback');
+                        const userAnswer = input.value;
+                        if (correctAnswers.includes(userAnswer)) {
+                            feedback.innerText = " Верно!";
+                            feedback.style.color = "green";
+                        } else {
+                            feedback.innerText = " Ошибка";
+                            feedback.style.color = "red";
+                        }
+                    }
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+            </section>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+</body>
+</html>
+
+

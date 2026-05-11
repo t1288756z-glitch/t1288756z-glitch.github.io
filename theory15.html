@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Теория по заданию 15. Создание алгоритма для исполнителя Робот</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="main">
+    <section class="wrapper">
+        <header class="header">
+        <nav class="menu">
+            <a class="menu__item" href="mainpage.html">Главная</a>
+            <a class="menu__item" href="theorymain.html">Теория</a>
+            <a class="menu__item" href="practicemain.html">Практика</a>
+        </nav>
+        </header>
+        <section class="about">
+                <h2>Тип 15. Создание алгоритма для исполнителя Робот. Общий алгоритм решения</h2>
+                <div style="height: 20px;"></div>
+                <p>Задание проверяет умение писать алгоритмы для исполнителя в среде КуМир. Основная сложность здесь — составить универсальный код, который сработает на <b>любом</b> поле, подходящем под описание.</p>
+                <div style="height: 20px;"></div>
+                <p><b>1. Анализ обстановки</b></p>
+                    <p>Внимательно прочитайте условие. Робот должен закрасить клетки вдоль стен. Стены могут быть разной длины, а проходы — в разных местах. Поэтому <b>никогда не используйте простые команды</b> вроде «вправо», «вправо», «вправо». Используйте только циклы.</p>
+                <div style="height: 10px;"></div>
+                <p><b>2. Конструкция цикла</b></p>
+                    <p>Ваш главный инструмент — цикл <u>нц пока (условие) ... кц</u>. Чаще всего используются проверки:</p>
+                    <ul>
+                        <li><strong>справа свободно / справа стена</strong></li>
+                        <li><strong>слева свободно / слева стена</strong></li>
+                        <li><strong>сверху свободно / сверху стена</strong></li>
+                        <li><strong>снизу свободно / снизу стена</strong></li>
+                    </ul>
+                <p><b>3. Пошаговое выполнение (типовой сценарий)</b></p>
+                        <div class="step-box" style="font-size: 20px;">
+                            <span class="step-title"><u>Шаг 1:</u> Дойти до начала стены. Если робот стоит не у стены, используйте цикл, чтобы он «добежал» до неё. Например:</span>
+                            <pre>
+                        <span class="keyword">нц пока</span><span class="condition"> сверху свободно</span>
+                            <span class="command">вверх</span>
+                        <span class="keyword">кц</span></pre>
+                        </div>
+                        <div class="step-box" style="font-size: 20px;">
+                            <span class="step-title"><u>Шаг 2:</u> Закрасить вдоль стены. Пока стена рядом, красим и движемся. Например:</span>
+                            <pre>
+                        <span class="keyword">нц пока</span><span class="condition"> не сверху свободно</span>
+                            <span class="command">закрасить</span>
+                            <span class="command">вправо</span>
+                        <span class="keyword">кц</span></pre>
+                        </div>
+                        <div class="step-box" style="font-size: 20px;">
+                            <span class="step-title"><u>Шаг 3:</u> Преодолеть проход (если есть). Если в стене дырка, её нужно просто проскочить. Например:</span>
+                            <pre>
+                        <span class="keyword">нц пока</span><span class="condition"> сверху свободно</span>
+                            <span class="command">вправо</span>
+                        <span class="keyword">кц</span></pre>
+                        </div>
+                <div style="height: 10px;"></div>
+                <p><b>Золотые правила успеха:</b></p>
+                    <ul>
+                        <li><strong>Не врезаться.</strong> Перед каждым шагом робот должен «проверять» дорогу условием цикла. Если робот ударится о стену — это 0 баллов.</li>
+                        <li><strong>Лишние клетки.</strong> Не закрашивайте клетки, которые не указаны в задании.</li>
+                        <li><strong>Конечная точка.</strong> Роботу всё равно, где остановиться, если в задании не сказано иное. Главное — закрасить всё нужное и выжить.</li>
+                    </ul>
+                <div style="height: 10px;"></div>
+                <p><b>Шпаргалка по командам (для вставки в код):</b></p>
+                <div style="height: 10px;"></div>
+                <table class="th15">
+                <thead>
+                    <tr>
+                        <th>Действие</th>
+                        <th>Команда в КуМире</th>  
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Движение</td><td>вверх, вниз, влево, вправо</td>
+                    <tr><td>Рисование</td><td>закрасить</td></tr>
+                    <tr><td>Начало цикла</td><td>нц пока (условие)</td></tr>
+                    <tr><td>Конец цикла</td><td>кц</td></tr>
+                    <tr><td>Отрицание</td><td>не (например, пока не снизу свободно)</td></tr>   
+                </tbody>
+            </table>
+                <div style="height: 20px;"></div>
+                <p><a href="practice15.html">Перейти к практике по заданию...</a></p>
+                <script>
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                         document.getElementById('footer-placeholder').innerHTML = data;
+                    }); 
+                </script>
+        </section>
+    </section>
+</main>
+<div id="footer-placeholder"></div>
+</body>
+</html>
+
+
