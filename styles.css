@@ -1,0 +1,142 @@
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav, h2, h1 {
+    text-align: center;   
+}
+nav a {
+    padding: 10px ; 
+    display: inline-block;
+    font-size: 20px;
+}
+footer {
+    color: #968587;
+    text-align: center;
+    margin-top: 40px;
+}
+main {
+    flex: 1; /* Этот блок забирает всё свободное место, толкая футер вниз */
+}
+p, li {
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+}
+
+.points th, .points td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+.points th, .marks th, .th15 th, .th3 th, .th4 th {
+    background-color: #f69fea; /* Зеленый цвет для заголовка */
+    color: white;
+}
+
+.points tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Выделение практической части другим цветом */
+.practice-row {
+    background-color: #e8f4fd !important;
+    font-weight: bold;
+}
+.marks, .th15, .th3, .th4 {
+  width: 100%;           /* Растянуть на всю ширину контейнера */
+  max-width: 500px;      /* Ограничить максимальную ширину */
+  margin: 20px auto;     /* Центрировать саму таблицу */
+  border-collapse: collapse; /* Убирает двойные рамки между ячейками */
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.marks th, .marks td, .th3 th, .th3 td, .th4 th, .th4 td, .th15 th, .th15 td{
+  border: 1px solid #ddd; /* Светлая рамка */
+  padding: 12px;         /* Отступы внутри ячеек */
+  text-align: center;    /* Текст по центру */
+}
+
+.marks tr:nth-child(even) {
+  background-color: #f2f2f2; /* "Зебра": подкрашиваем четные строки */
+}
+.points {
+  width: 100%;           /* Растянуть на всю ширину контейнера */
+  margin: 20px auto;     /* Центрировать саму таблицу */
+  border-collapse: collapse; /* Убирает двойные рамки между ячейками */
+  font-family: sans-serif;
+  font-size: 18px;
+  max-width: 700px;      /* Ограничить максимальную ширину */
+}
+.image-container {
+    display: flex; /* Включает режим гибкого контейнера */ 
+    gap: 10px; /* Задает фиксированный отступ между картинками */
+}
+
+.image-container img {
+    width: 400px; 
+    height: auto; /* Сохраняет пропорции */
+}
+.timer-container {
+    background: #2c3e50; /* Темный фон */
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    justify-content: center;
+    display: flex;
+    margin: 50px auto;
+    width: fit-content;
+}
+
+.timer-display {
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+}
+
+.time-number {
+    font-size: 2.5rem;
+    background: #34495e;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 4px solid #9ff6ca; /* Красная полоска снизу */
+}
+
+.time-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-top: 5px;
+    color: #bdc3c7;
+}
+.t13, .t14 {  
+    border-collapse: collapse; /* Убирает двойные рамки */
+    width: 100%;
+    max-width: 700px;
+}
+.t13 th, .t13 td, .t14 th, .t14 td {
+    border: 1px solid black; /* Тонкая рамка */
+    padding: 8px;
+    text-align: left;
+    }
+.t13 {
+    font-size: 18px;
+}
